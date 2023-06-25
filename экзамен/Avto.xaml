@@ -1,0 +1,33 @@
+﻿<Page x:Class="экзамен.Avto"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:экзамен"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Avto">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="1" VerticalAlignment="Center" Margin="0 0 0 40">
+            <TextBlock Text="Введите логин" Style="{StaticResource TBlock}"/>
+            <TextBox Name="LoginTB" Style="{StaticResource TBox}"/>
+            <TextBlock Text="Введите пароль" Style="{StaticResource TBlock}"/>
+            <PasswordBox Name="PasswordTB" PasswordChar="*" Style="{StaticResource PBox}"/>
+            <Button Name="input" Click="input_Click" Content="Войти" Style="{StaticResource But}"/>
+        </StackPanel>
+        <Grid Name="CaphGrid" Grid.Column="1"  Background="Black" Height="220" Visibility="Hidden">
+            <StackPanel VerticalAlignment="Center">
+                <TextBlock Text="Введите символы, которые показаны на картинке" Style="{StaticResource TBosn}" TextWrapping="Wrap"/>
+                <TextBlock Name="CapchTBlock" Style="{StaticResource Capch}"/>
+                <TextBox Name="CapchTBox" Style="{StaticResource TBox}" Margin="5"/>
+                <Button Name="CapchBut" Click="CapchBut_Click" Style="{StaticResource But}" Margin="5 0" Content="Продолжить"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>
